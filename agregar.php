@@ -1,12 +1,13 @@
 <?php
 include("conexion.php");
 if($_POST){
+$id=$_POST['id'];
 $nombre=$_POST['nombre'];
 $categoria=$_POST['categoria'];
 $precio=$_POST['precio'];
 $stock=$_POST['stock'];
-$sql="INSERT INTO herramientas (nombre,categoria,precio,stock)
-values ('$nombre','$categoria','$precio','$stock')";
+$sql="INSERT INTO herramientas (id,nombre,categoria,precio,stock)
+values ('$id','$nombre','$categoria','$precio','$stock')";
 $conexion->query($sql);
 header("Location: admin.php");
 }
@@ -45,8 +46,9 @@ width:95%;
 <body>
 <form method="POST">
 <h1>Agregar Herramienta</h1>
+<input type="number" name="id" placeholder="ID">
 <input type="text" name="nombre" placeholder="Nombre">
-<input  type="texy" name="categoria" placeholder="Categoria">
+<input  type="text" name="categoria" placeholder="Categoria">
 <input type"number" step="0.01" name="precio" placehoder="Precio">
 <input type="number" name="stock" placeholder="Stock">
 <button type="submit">

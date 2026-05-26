@@ -1,5 +1,20 @@
 <?php
 include("conexion.php");
+if($_POST){
+$id = $_POST['id'];
+$nombre = $_POST['nombre'];
+$categoria = $_POST['categoria'];
+$precio = $_POST['precio'];
+$stock = $_POST['stock'];
+$sql = "UPDATE herramientas SET
+nombre='$nombre',
+categoria='$categoria',
+precio='$precio',
+stock='$stock'
+WHERE id='$id'";
+$conexion->query($sql);
+header("Location: admin.php");
+}
 $id = $_GET['id'];
 $sql="SELECT * FROM herramientas WHERE id='$id'";
 $resultado=$conexion->query($sql);
@@ -45,7 +60,7 @@ width:95%;
 <input type="text" name="categoria"  value="<?php echo $fila['categoria']; ?>">
 <input type="number" step="0.01" name="precio" value="<?php echo $fila['precio']; ?>">
 <input type="number" name="stock" value="<?php echo $fila['stock']; ?>">
-<button type="submit" name="actualizar">
+<button type="submit" >
 Actualizar
 </button>
 </form>
