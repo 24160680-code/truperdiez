@@ -6,8 +6,9 @@ $usuario = $_POST['usuario'];
 $password = $_POST['password'];
 
 if(
-$usuario == "24160680@itoaxaca.edu.mx"
-&& $password == "24160680TSO"
+($usuario == "24160680@itoaxaca.edu.mx" && $password == "24160680TSO")
+||
+($usuario == "24160682@itoaxaca.edu.mx" && $password == "24160682TSO")
 ){
 
 	header("Location: admin.php");
