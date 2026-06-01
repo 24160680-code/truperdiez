@@ -88,7 +88,7 @@ border-raddis:8px;
 </style>
 </head>
 <body>
-<h1>Panel <span>Administrador</span></h1>
+<h1>Panel <span>PANEL TRUPER</span></h1>
 <a href="index.php" class="btn">Inicio</a>
 <a href="agregar.php" class="btn">Agregar Herramientas</a>
 </div>
