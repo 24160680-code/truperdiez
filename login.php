@@ -88,7 +88,7 @@ margin-bottom:15px;
 </head>
 <body>
 <div class="login">
-<h1>Inicio de seción</h1>
+<h1>Login Tercera Oportunidad TSO NLM</h1>
 <?php
 if(isset($error)){
 echo "<div class='error'>$error</div>";
