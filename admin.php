@@ -112,7 +112,9 @@ border-raddis:8px;
 <td><?php echo $fila['precio']; ?></td>
 <td><?php echo $fila['stock']; ?></td>
 <td>
-<a class="eliminar" href="eliminar.php?id=<?php  echo $fila['id']; ?>">
+<a class="eliminar" href="eliminar.php?id=<?php  echo $fila['id']; ?>"
+onclick="return confirm('¿Estás seguro de  que deseas eliminar este registro?');">
+>
 Eliminar
 </a>
 </td>

@@ -2,7 +2,7 @@
 $conexion = new mysqli(
 "localhost",
 "dev_user",
-"Dev2026",
+"Dev*2026",
 "truperdiez",
 );
 if($conexion->connect_error){
